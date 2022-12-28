@@ -8,7 +8,7 @@ class Core {
         $url = $this->getURL();
 
         if(isset($url)){
-        // look in controllers for first valu e
+        // look in controllers for first value
         if(file_exists('../app/Controllers/'.ucwords($url[0]).'.php')){
             // if exist , set controller 
             $this->currentController = ucwords($url[0]);
@@ -30,7 +30,7 @@ class Core {
         // get params 
         $this->params = $url ? array_values($url) : [];
         // print_r($this->params);
-
+        
 
         call_user_func_array([$this->currentController, $this->CurrentMethod], $this->params);
        

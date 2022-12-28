@@ -13,9 +13,15 @@ class Users extends Controller
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             $data = [
                 'name' => trim($_POST['name']),
+                'Phone_Number' => trim($_POST['Phone_Number']),
+                'Adresse' => trim($_POST['Adresse']),
+                'ville' => trim($_POST['ville']),
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
                 'confirm_password' => trim($_POST['confirm_password']),
+                'Phone_Number_err' => '',
+                'Adresse_err' => '',
+                'ville_err' => '',
                 'name_err' => '',
                 'email_err' => '',
                 'password_err' => '',
@@ -26,9 +32,19 @@ class Users extends Controller
             if (empty($data['name'])) {
                 $data['name_err'] = 'please enter name ';
             }
-
-
-
+            // check Phone Number
+            if (empty($data['Phone_Number'])) {
+                $data['Phone_Number_err'] = 'please enter Phone Number ';
+            }
+            // check Adresse
+            if (empty($data['Adresse'])) {
+                $data['Adresse_err'] = 'please enter Adresse ';
+            }
+            // check Ville
+            if (empty($data['ville'])) {
+                $data['ville_err'] = 'please enter ville ';
+            }
+            // check email
             if (empty($data['email'])) {
                 $data['email_err'] = 'please enter email ';
             } else {
@@ -57,7 +73,6 @@ class Users extends Controller
 
             if (empty($data['email_err']) && empty($data['email_err']) && empty($data['password_err']) && empty($data['confirm_password_err'])) {
                 //validate
-
                 // hash Password
                 $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
                 // register User
@@ -72,10 +87,16 @@ class Users extends Controller
             }
         } else {
             $data = [
-                'name' => '',
+                'name' =>'',
+                'Phone_Number' => '',
+                'Adresse' => '',
+                'ville' => '',
                 'email' => '',
                 'password' => '',
                 'confirm_password' => '',
+                'Phone_Number_err' => '',
+                'Adresse_err' => '',
+                'ville_err' => '',
                 'name_err' => '',
                 'email_err' => '',
                 'password_err' => '',
@@ -100,18 +121,23 @@ class Users extends Controller
             // check eamil
             if (empty($data['email'])) {
                 $data['email_err'] = 'please enter email';
-            }
-            if (empty($data['password'])) {
-                $data['password_err'] = 'please enter password';
-            }
-
-
-            // check email if exist in DB
+            }else{
+                // check email if exist in DB
             if ($this->userModel->findUserByEmail($data['email'])) {
                 // user is found
             } else {
                 $data['email_err'] = 'this account is not exist';
             }
+            }
+
+
+            
+            if (empty($data['password'])) {
+                $data['password_err'] = 'please enter password';
+            }
+
+
+            
 
 
             // errores are empty
@@ -145,7 +171,7 @@ class Users extends Controller
 
     //create a methode separeted for login
     public function createUserSession($user){
-        $_SESSION['user_id'] = $user->id_user;
+        $_SESSION['user_id'] = $user->Id_client;
         $_SESSION['user_name'] = $user->Name;
         $_SESSION['user_email'] = $user->email;
         header('location:' . URLROOT . '/pages/index');

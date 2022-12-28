@@ -1,5 +1,6 @@
 <?php include APPROOT.'/views/inc/header.php'; ?>
-<div class="row">
+
+<div class="row" style="padding-top:120px ;">
     <div class="col-md-6 mx-auto">
         <div class="card card-body bg-light mt-5 m-5">
             <?php flash('register_success'); ?>
@@ -21,7 +22,7 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col">
-                        <input type="submit" value="connect" class="btn btn-success btn-block">
+                        <input type="submit" value="connect" class="btn btn-light btn-block">
                     </div>
                     <div class="col">
                         <a href="<?php echo URLROOT; ?>/users/register" class="btn btn-light btn-block">No account ? register</a>
