@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top ">
+<nav class="navbar navbar-expand-lg navbar-light bg-white pt-4 fixed-top ">
   <div class="container">
     <a class="navbar-brand d-flex justify-content-between align-items-center order-lg-0" href="<?php echo  APPROOT; ?>/pages/index">
       <span class="text-uppercase fw-lighter ms-2">electroMVC</span>
