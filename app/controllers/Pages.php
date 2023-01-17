@@ -38,6 +38,13 @@ class Pages extends Controller{
         $this->view('pages/categories',$data);
         
     }
+    public function showMore() {
+        $data = [
+            
+        ];  
+        $this->view('pages/showMore',$data);
+        
+    }
 
 
 

@@ -63,7 +63,7 @@
                             <span class="fw-bold">$ 45.50</span>
                         </div>
                         <div class="">
-                            <button type="button " class="btn">Show more</button>
+                            <a href="<?php echo URLROOT; ?>/pages/showMore"><button type="button " class="btn">Show more</button></a>
                             <button type="button " class="btn">Buy Now</button>
                         </div>
                     </div>
