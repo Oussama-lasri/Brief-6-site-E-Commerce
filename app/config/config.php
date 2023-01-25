@@ -8,7 +8,7 @@ define('DB_NAME', 'brief-6-siteecom');
 // app root
 define('APPROOT', dirname(dirname(__FILE__))) ;
 // URL root
-define('URLROOT', 'https://localhost/brief-6');
+define('URLROOT', 'https://localhost/Brief-6-site-E-Commerce');
 // site name
 define('SITENAME', 'ElectroMVC');
 // version of app
