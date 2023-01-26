@@ -13,17 +13,17 @@ class Dashboard extends Controller
         $this->view('Dashboard/Dashboard',$data);
     }
 
-    public function showProduct(){
+    public function gestionProduct(){
         $data = [
             
         ];  
-        $this->view('Dashboard/showProduct',$data);
+        $this->view('Dashboard/gestionProduct',$data);
     }
-    public function addProduct(){
+    public function gestionCategorie(){
         $data = [
             
         ];  
-        $this->view('Dashboard/addProduct',$data);
+        $this->view('Dashboard/gestionCategorie',$data);
     }
     
 }

@@ -17,7 +17,7 @@
             <div class="card card-body bg-light mt-3 m-5">
                 <h2>create A product</h2>
                 <p>please fill out this form to register with us</p>
-                <form action="<?php echo URLROOT; ?>/products/addProduct" method="post">
+                <form action="<?php echo URLROOT; ?>/Products/addProduct" method="post">
                     <div class="form-group">
                         <!-- reference -->
                         <label for="reference">reference : <sup>*</sup></label>
@@ -28,9 +28,9 @@
                         <input type="text" name="libelle" class="form-control form-control-lg <?php echo (!empty($data['libelle_err'])) ? 'is-invalid' : '' ?>" value="<?php echo $data['libelle']; ?>">
                         <span class="invalid-feedback"><?php echo $data['libelle_err']; ?></span>
                         <!-- code bare -->
-                        <label for="code_bare" class="mt-3">code bare : <sup>*</sup></label>
-                        <input type="text" name="code_bare" class="form-control form-control-lg <?php echo (!empty($data['code_bare_err'])) ? 'is-invalid' : '' ?>" value="<?php echo $data['code_bare']; ?>">
-                        <span class="invalid-feedback"><?php echo $data['code_bare_err']; ?></span>
+                        <label for="code_barre" class="mt-3">code bare : <sup>*</sup></label>
+                        <input type="text" name="code_barre" class="form-control form-control-lg <?php echo (!empty($data['code_barre_err'])) ? 'is-invalid' : '' ?>" value="<?php echo $data['code_barre']; ?>">
+                        <span class="invalid-feedback"><?php echo $data['code_barre_err']; ?></span>
                         <!-- prix d'achat -->
                         <label for="prix_achat" class="mt-3">prix d'achat : <sup>*</sup></label>
                         <input type="number" name="prix_achat" class="form-control form-control-lg <?php echo (!empty($data['prix_achat_err'])) ? 'is-invalid' : '' ?>" value="<?php echo $data['prix_achat']; ?>">
@@ -47,9 +47,9 @@
                         <label for="Categorie" class="mt-3 ">categorie de produit : <sup>*</sup></label>
                         <select class="form-select" name="Categorie" aria-label="Default select example is-invalid <?php echo (!empty($data['Categorie_err'])) ? 'is-invalid' : '' ?>" value="<?php echo $data['confirm_password']; ?>">
                             <option selected>----- Categorie -----</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
+                            <option value="test">One</option>
+                            <option value="test1">Two</option>
+                            <option value="tst22">Three</option>
                         </select>
                         <span class="invalid-feedback"><?php echo $data['Categorie_err']; ?></span>
                         <!--  -->
