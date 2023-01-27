@@ -6,7 +6,7 @@ class Product
     {
         $this->db = new DataBase;
     }
-    public function getPosts()
+    public function getProduct()
     {
         $this->db->query('SELECT * from Produit');
         $results = $this->db->resultSet();
@@ -42,7 +42,7 @@ class Product
     }
     public function updateProduit($data){
         $this->db->query('UPDATE `produit` SET `reference`=:reference,`libelle`=:libelle,`code_barre`=:code_barre,`prix_achat`=:prix_achat,`prix_final`=:prix_final,`prix_offre`=:prix_offre,`descreption`=:descreption,`id_categorie`=:id_categorie WHERE id_Produit=:id ');
-        $this->db->bind(':id_Produit',$data['id_Produit']);
+        $this->db->bind(':id',$data['id_Produit']);
         $this->db->bind(':reference',$data['reference']);
         $this->db->bind(':libelle',$data['libelle']);   
         $this->db->bind(':code_barre',$data['code_barre']);
@@ -60,9 +60,6 @@ class Product
     public function deleteProduit($id){
         $this->db->query('DELETE FROM produit WHERE id_Produit = :id  ');
         $this->db->bind(':id',$id);
-        
-
-
         if($this->db->execute()){
             return true;
         } else {

@@ -47,7 +47,7 @@
     <div class="row my-5">
         <h3 class="fs-4 mb-3">Commands</h3>
         <div class="col">
-            <table class="table bg-white rounded shadow-sm  table-hover">
+            <table class="table bg-white rounded shadow-sm table-hover">
                 <thead>
                     <tr>
                         <th scope="col" width="50">Id</th>
@@ -59,42 +59,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Television</td>
-                        <td>Jonny</td>
-                        <td>$1200</td>
-                        <td>Television</td>
-                        <td>Jonny</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Television</td>
-                        <td>Jonny</td>
-                        <td>$1200</td>
-                        <td>Television</td>
-                        <td>Jonny</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Television</td>
-                        <td>Jonny</td>
-                        <td>$1200</td>
-                        <td>Television</td>
-                        <td>Jonny</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Television</td>
-                        <td>Jonny</td>
-                        <td>$1200</td>
-                        <td>Television</td>
-                        <td>Jonny</td>
-
-                    </tr>
+                    
 
 
                 </tbody>
@@ -120,65 +85,20 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <?php foreach ($data['products'] as $product ) : ?>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Television</td>
-                        <td>Jonny</td>
-                        <td>$1200</td>
-                        <td>Television</td>
-                        <td>Jonny</td>
-                        <td>$1200</td>
-                        <td>Television</td>
-                        <td>Jonny</td>
+                        <th scope="row"><?php ECHO $product->id_Produit ?></th>
+                        <td><?php ECHO $product->reference ?></td>
+                        <td><?php ECHO $product->libelle ?></td>
+                        <td><?php ECHO $product->code_barre ?></td>
+                        <td><?php ECHO $product->prix_achat ?></td>
+                        <td><?php ECHO $product->prix_final ?></td>
+                        <td><?php ECHO $product->prix_offre ?></td>
+                        <td><?php ECHO $product->descreption ?></td>
+                        <td><?php ECHO $product->id_categorie ?></td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                        <td>$750</td>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                        <td>$750</td>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                        <td>$750</td>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                        <td>$750</td>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                        <td>$750</td>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                        <td>$750</td>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                        <td>$750</td>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                        <td>$750</td>
-                        <td>Laptop</td>
-                        <td>Kenny</td>
-                    </tr>
-
+                    <?php endforeach ; ?>
+                    
                 </tbody>
             </table>
         </div>

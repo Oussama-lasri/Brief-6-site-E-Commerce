@@ -1,90 +1,47 @@
 <?php include APPROOT . '/views/inc/sidebare.php'; ?>
 
-<div class="row my-5 container">
+<div class="row my-5 container-fluid">
     <a href="<?php echo URLROOT; ?>/products/addProduct" class="btn btn-success col-lg-1 ml-3">add</a>
     <h3 class="fs-4 mb-3">Products</h3>
     <div class="col">
-        <table class="table bg-white rounded shadow-sm  table-hover">
+        <table class="table bg-white rounded shadow-sm  table-hover text-center">
             <thead>
                 <tr>
-                    <th scope="col-lg-1" width="50">Id</th>
-                    <th scope="colgroup">Name product</th>
-                    <th scope="col">référence</th>
-                    <th scope="col">code barre</th>
-                    <th scope="col">prix d’achat</th>
-                    <th scope="col">prix final</th>
-                    <th scope="col">prix offre</th>
-                    <th scope="col">description </th>
-                    <th scope="col">catégorie </th>
-                    <th scope="col">action </th>
+                    <th class="col-lg-1" >Id</th>
+                    <th class="col-lg-1">Name product</th>
+                    <th class="col-lg-1">référence</th>
+                    <th class="col-lg-1">code barre</th>
+                    <th class="col-lg-1">prix d’achat</th>
+                    <th class="col-lg-1">prix final</th>
+                    <th class="col-lg-1">prix offre</th>
+                    <th class="col-lg-2">description </th>
+                    <th class="col-lg-1">catégorie </th>
+                    <th class="col-lg-1">image </th>
+                    <th class="col-lg-2">action </th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Television</td>
-                    <td>Jonny</td>
-                    <td>$1200</td>
-                    <td>Television</td>
-                    <td>Jonny</td>
-                    <td>$1200</td>
-                    <td>Television</td>
-                    <td>Jonny</td>
-                    <td class="text-center">
+            <tbody class="justify-content-center text-center">
+                <?php foreach ($data['products'] as $product) : ?>
+                    <tr>
+                        <th scope="row"><?php echo $product->id_Produit ?></th>
+                        <td><?php echo $product->reference ?></td>
+                        <td><?php echo $product->libelle ?></td>
+                        <td><?php echo $product->code_barre ?></td>
+                        <td><?php echo $product->prix_achat ?></td>
+                        <td><?php echo $product->prix_final ?></td>
+                        <td><?php echo $product->prix_offre ?></td>
+                        <td><?php echo $product->descreption ?></td>
+                        <td><?php echo $product->id_categorie ?></td>
+                        <td class="col-lg-1">image</td>
+                        <td class="text-center col-lg">
+                            <a href="<?php echo URLROOT ?>/Products/deleteProduct/<?php echo $product->id_Produit  ?>"> <i class="fas fa-solid fa-trash" style="color: red;"></i></a>
+                            <a href="<?php echo URLROOT ?>/Products/updateProduct/<?php echo $product->id_Produit  ?>"><i class="fas fa-solid fa-pen color-pen mx-3" style="color: blue; margin-left: 2px;"></i></a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
 
-                        <a href=""><i class="fas fa-solid fa-pen color-pen mx-3" style="color: blue; margin-left: 2px;"></i></a>
-                        <a href=""> <i class="fas fa-solid fa-trash" style="color: red;"></i></a>
 
-                    </td>
 
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-                    <td>$750</td>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-                    <td>$750</td>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-                    <td>$750</td>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-                    <td>$750</td>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-                    <td>$750</td>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-                    <td>$750</td>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-                    <td>$750</td>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-                    <td>$750</td>
-                    <td>Laptop</td>
-                    <td>Kenny</td>
-                </tr>
 
             </tbody>
         </table>

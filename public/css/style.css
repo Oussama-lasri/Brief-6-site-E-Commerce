@@ -166,3 +166,14 @@ body{
 
 
 /* **************** */
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px ;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: aliceblue;
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%) ;
+}

@@ -11,6 +11,9 @@
         <i class="fa fa-shopping-cart position-relitive"></i>
         <span class="postion-absolute top-3 start-30 translate-middle badge bg-primary">2</span>
       </button>
+      <div class="cart">
+        
+      </div>
 
       <button type="button" class="btn">
         <i class="fa fa-heart position-relitive"></i>
