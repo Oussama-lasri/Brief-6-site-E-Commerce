@@ -31,5 +31,12 @@ class Dashboard extends Controller
         ];  
         $this->view('Dashboard/gestionCategorie',$data);
     }
+    public function gestionCommande(){
+        // $Commands = $this->modelCommands->getCommande();
+        $data = [
+            'Commands'=> '' ,
+        ];  
+        $this->view('Dashboard/gestionCommande',$data);
+    }
     
 }

@@ -24,9 +24,9 @@
                         class="fas fa-project-diagram me-2"></i>Product</a>
                 <a href="<?php echo URLROOT ?>/Dashboard/gestionCategorie" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-chart-line me-2"></i>Categorie</a>
-                <a href="<?php echo URLROOT ?>/Dashboard/" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="<?php echo URLROOT ?>/Dashboard/gestionCommande" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-chart-line me-2"></i>Commands</a>
-                <a href="<?php echo URLROOT ?>/Dashboard/" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
+                <a href="<?php echo URLROOT ?>/Dashboard/gestionClient" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"><i
                         class="fas fa-chart-line me-2"></i>Clients</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"><i
                         class="fas fa-power-off me-2"></i>Logout</a>

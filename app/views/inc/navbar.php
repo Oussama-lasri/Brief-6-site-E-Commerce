@@ -5,34 +5,52 @@
     </a>
 
     <div class="order-lg-2 nav-btns">
-    <?php if(isset($_SESSION['user_id'])) : ?>
+      <?php if (isset($_SESSION['user_id'])) : ?>
 
-      <button type="button" class="btn">
-        <i class="fa fa-shopping-cart position-relitive"></i>
-        <span class="postion-absolute top-3 start-30 translate-middle badge bg-primary">2</span>
-      </button>
-      <div class="cart">
-        
-      </div>
-
-      <button type="button" class="btn">
-        <i class="fa fa-heart position-relitive"></i>
-        <span class="postion-absolute top-3 start-30 translate-middle badge bg-primary">2</span>
-      </button>
-
-      <a href="<?php echo URLROOT; ?>/users/logout  ">
-        <button type="button" class="btn">
-          <i class="fa fa-sign-out position-relitive"></i>
-          <span>logout</span>
+        <button type="button" class="btn" id="pannier">
+          <i class="fa fa-shopping-cart position-relitive"></i>
+          <span class="postion-absolute top-3 start-30 translate-middle badge bg-primary">2</span>
         </button>
-      </a>
+        <div class="cart">
+          <h2 class="cart-title">Your cart</h2>
+          <div class="cart-content">
+            <div class="cart-box">
+              <img src="<?php echo URLROOT ?>/img/product/pc/p1.png" alt="" class="cart-img">
+              <div class="detail-box">
+                <div class="cart-product-title">product1</div>
+                <div class="cart-price">$25</div>
+                <input type="number" value="1" class="cart-quantity">
+              </div>
+              <i class="fas fa-solid fa-trash cart-remove"></i>
+            </div>
+          </div>
+          <div class="total">
+            <div class="total-title">Total :</div>
+            <div class="total-price">0 $</div>
+          </div>
+          <button type="button" class="btn-buy">Buy Now</button>
+          <i class="fa-solid fa-xmark" id="close-cart"></i>
+          
+        </div>
+
+        <button type="button" class="btn">
+          <i class="fa fa-heart position-relitive"></i>
+          <span class="postion-absolute top-3 start-30 translate-middle badge bg-primary">2</span>
+        </button>
+
+        <a href="<?php echo URLROOT; ?>/users/logout  ">
+          <button type="button" class="btn">
+            <i class="fa fa-sign-out position-relitive"></i>
+            <span>logout</span>
+          </button>
+        </a>
       <?php else : ?>
-      <a href="<?php echo URLROOT; ?>/users/login">
-        <button type="button" class="btn">
-          <i class="fa fa-sign-in position-relitive"></i>
-          <span>login</span>
-        </button>
-      </a>
+        <a href="<?php echo URLROOT; ?>/users/login">
+          <button type="button" class="btn">
+            <i class="fa fa-sign-in position-relitive"></i>
+            <span>login</span>
+          </button>
+        </a>
 
       <?php endif; ?>
       <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#navMenu">
